@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TranQuocTrung_62132908._62.CNTT_3.Models;
+using TranQuocTrung_62132908._62.CNTT_3.Repository;
 
 namespace TranQuocTrung_62132908._62.CNTT_3.Repositories
 {
-    public interface IDanhMucRepository
+    public interface IDanhMucRepository : BaseRepository<TDanhMucSp>
     {
         Task<IEnumerable<TDanhMucSp>> GetAllAsync();
         Task<TDanhMucSp> GetByIdAsync(string maSp);

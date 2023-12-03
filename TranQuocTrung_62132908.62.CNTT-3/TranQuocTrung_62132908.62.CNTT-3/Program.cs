@@ -1,7 +1,10 @@
 using TranQuocTrung_62132908._62.CNTT_3.Models;
 using TranQuocTrung_62132908._62.CNTT_3.Repositories;
 using TranQuocTrung_62132908._62.CNTT_3.Repository;
+using TranQuocTrung_62132908._62.CNTT_3.Service;
+using TranQuocTrung_62132908._62.CNTT_3.Services;
 using TranQuocTrung_62132908.Repository;
+using TranQuocTrung_62132908.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,10 @@ builder.Services.AddScoped<IKhachHangRepository, KhachHangRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<INhanVienRepository, NhanVienRepository>();
 builder.Services.AddScoped<IDanhMucRepository, DanhMucRepository>();
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<DanhMucService>();
+builder.Services.AddScoped<KhachHangService>();
+builder.Services.AddScoped<NhanVienService>();
 
 var app = builder.Build();
 

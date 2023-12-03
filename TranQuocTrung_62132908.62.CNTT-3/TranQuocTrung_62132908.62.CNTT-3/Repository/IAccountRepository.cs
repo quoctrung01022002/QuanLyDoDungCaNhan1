@@ -4,7 +4,7 @@ using TranQuocTrung_62132908._62.CNTT_3.Models;
 
 namespace TranQuocTrung_62132908._62.CNTT_3.Repository
 {
-    public interface IAccountRepository
+    public interface IAccountRepository : BaseRepository<TUser>
     {
         Task<IEnumerable<TUser>> GetAllUsers();
         Task<TUser> GetUserByUsername(string username);

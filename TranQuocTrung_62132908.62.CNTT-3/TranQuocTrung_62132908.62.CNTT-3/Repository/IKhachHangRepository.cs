@@ -4,7 +4,7 @@ using TranQuocTrung_62132908._62.CNTT_3.Models;
 
 namespace TranQuocTrung_62132908._62.CNTT_3.Repository
 {
-    public interface IKhachHangRepository
+    public interface IKhachHangRepository : BaseRepository<TKhachHang>
     {
         // Lấy danh sách tất cả khách hàng
         Task<IEnumerable<TKhachHang>> GetAllKhachHangs();
